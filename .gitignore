@@ -1,0 +1,16 @@
+.vscode
+**/__pycache__/
+*.pyc
+.venv
+.env
+.DS_Store
+
+# generated artifacts
+data/
+data_sample/
+data_submit/
+dataverse_upload/
+scripts/output/
+*.h5
+*.tar.gz
+image.png

@@ -1,0 +1,783 @@
+{
+  "fixed_depth": 10,
+  "input_ascii": "...............\n...............\n...............\n..........999..\n.....88...999..\n....8888..555..\n.....8....555..\n...............\n...............\n....777........\n.....77........\n.....77........\n.....77........\n...............\n...............",
+  "level": 7,
+  "n_shapes": 3,
+  "output_ascii": ".........7.....\n.......77.7....\n........77.....\n...............\n...............\n...............\n...............\n...............\n...............\n....888...999..\n....88....999..\n....88....555..\n....88....555..\n...............\n...............",
+  "pool_seed": 42,
+  "program": [
+    {
+      "primitive": "rot90",
+      "selector": {
+        "param": 2,
+        "type": "by_index"
+      },
+      "target": null
+    },
+    {
+      "primitive": "translate_up",
+      "selector": {
+        "param": 8,
+        "type": "by_color"
+      },
+      "target": null
+    },
+    {
+      "primitive": "translate_right",
+      "selector": {
+        "param": 2,
+        "type": "by_index"
+      },
+      "target": null
+    },
+    {
+      "primitive": "swap_colors",
+      "selector": {
+        "param": 2,
+        "type": "by_index"
+      },
+      "target": {
+        "param": 3,
+        "type": "by_index"
+      }
+    },
+    {
+      "primitive": "rot90",
+      "selector": {
+        "param": 2,
+        "type": "by_index"
+      },
+      "target": null
+    },
+    {
+      "primitive": "translate_up",
+      "selector": {
+        "param": 8,
+        "type": "by_color"
+      },
+      "target": null
+    },
+    {
+      "primitive": "hollow",
+      "selector": {
+        "param": 2,
+        "type": "by_index"
+      },
+      "target": null
+    },
+    {
+      "primitive": "translate_down",
+      "selector": {
+        "param": 3,
+        "type": "by_index"
+      },
+      "target": null
+    },
+    {
+      "primitive": "flip_v",
+      "selector": {
+        "param": 3,
+        "type": "by_index"
+      },
+      "target": null
+    },
+    {
+      "primitive": "align_row",
+      "selector": {
+        "param": 1,
+        "type": "by_index"
+      },
+      "target": {
+        "param": 3,
+        "type": "by_index"
+      }
+    }
+  ],
+  "seed": 42,
+  "shape_generation": {
+    "shape_bordered_hollow_min_size": 9,
+    "shape_bordered_hollow_random_inner_size": true,
+    "shape_compactness": 8.0,
+    "shape_max_bbox_span": 5,
+    "shape_size_range": [
+      4,
+      16
+    ]
+  },
+  "shape_profile": "standard",
+  "stats": {
+    "avg_candidates_per_step": 5.6683168316831685,
+    "avg_pair_sec_per_attempt": 0.48449622713295476,
+    "avg_sampler_sec_per_call": 0.01505139919400618,
+    "avg_valid_candidates_per_step": 0.9356435643564357,
+    "dataset_attempts": 1,
+    "dominant_grounding_attempts": 74,
+    "dominant_grounding_dead_ends": 39,
+    "duplicate_rejects": 0,
+    "elapsed_sec": 72.38724306900986,
+    "filter_system": "filter",
+    "grounding_signature_count": 30,
+    "grounding_signature_stats": [
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 3,
+          "engine_noop": 1
+        },
+        "pair_failures": 4,
+        "program_attempts": 4,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 3,
+            "relational": 2,
+            "shape_axis": 1,
+            "translate": 4
+          },
+          "primitives": {
+            "align_row": 1,
+            "hollow": 1,
+            "rot90": 3,
+            "swap_colors": 1,
+            "translate_right": 1,
+            "translate_up": 3
+          },
+          "source_selectors": {
+            "by_color": 3,
+            "by_index": 7
+          },
+          "target_selectors": {
+            "by_index": 2
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 2
+        },
+        "pair_failures": 2,
+        "program_attempts": 2,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 1,
+            "relational": 1,
+            "shape_axis": 1,
+            "translate": 7
+          },
+          "primitives": {
+            "add_border": 1,
+            "align_row": 1,
+            "flip_v": 1,
+            "translate_down": 6,
+            "translate_left": 1
+          },
+          "source_selectors": {
+            "by_color": 9,
+            "by_index": 1
+          },
+          "target_selectors": {
+            "by_index": 1
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 2
+        },
+        "pair_failures": 2,
+        "program_attempts": 2,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 3,
+            "relational": 2,
+            "shape_axis": 1,
+            "translate": 4
+          },
+          "primitives": {
+            "align_row": 1,
+            "fill_interior": 1,
+            "rot90": 3,
+            "swap_colors": 1,
+            "translate_right": 1,
+            "translate_up": 3
+          },
+          "source_selectors": {
+            "by_color": 3,
+            "by_index": 7
+          },
+          "target_selectors": {
+            "by_index": 2
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "color": 1,
+            "d4": 2,
+            "relational": 1,
+            "shape_axis": 2,
+            "translate": 4
+          },
+          "primitives": {
+            "add_border": 1,
+            "align_row": 1,
+            "fill_interior": 1,
+            "flip_h": 1,
+            "flip_v": 1,
+            "next_color": 1,
+            "translate_down": 4
+          },
+          "source_selectors": {
+            "ALL": 1,
+            "by_color": 8,
+            "by_index": 1
+          },
+          "target_selectors": {
+            "by_index": 1
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "color": 1,
+            "d4": 2,
+            "relational": 1,
+            "translate": 6
+          },
+          "primitives": {
+            "align_row": 1,
+            "flip_h": 1,
+            "flip_v": 1,
+            "next_color": 1,
+            "translate_down": 6
+          },
+          "source_selectors": {
+            "by_color": 9,
+            "by_index": 1
+          },
+          "target_selectors": {
+            "by_index": 1
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "scene_none": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "color": 1,
+            "d4": 3,
+            "relational": 1,
+            "shape_axis": 2,
+            "translate": 3
+          },
+          "primitives": {
+            "add_border": 1,
+            "flip_h": 1,
+            "flip_v": 1,
+            "hollow": 1,
+            "next_color": 1,
+            "rot90": 1,
+            "swap_colors": 1,
+            "translate_right": 2,
+            "translate_up": 1
+          },
+          "source_selectors": {
+            "by_color": 4,
+            "by_index": 6
+          },
+          "target_selectors": {
+            "by_index": 1
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "color": 1,
+            "d4": 3,
+            "relational": 2,
+            "translate": 4
+          },
+          "primitives": {
+            "align_row": 1,
+            "flip_h": 1,
+            "flip_v": 1,
+            "next_color": 1,
+            "rot90": 1,
+            "swap_colors": 1,
+            "translate_right": 3,
+            "translate_up": 1
+          },
+          "source_selectors": {
+            "by_color": 4,
+            "by_index": 6
+          },
+          "target_selectors": {
+            "by_index": 2
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 1,
+            "relational": 1,
+            "shape_axis": 1,
+            "translate": 7
+          },
+          "primitives": {
+            "add_border": 1,
+            "align_row": 1,
+            "flip_v": 1,
+            "translate_down": 6,
+            "translate_left": 1
+          },
+          "source_selectors": {
+            "by_color": 1,
+            "by_index": 9
+          },
+          "target_selectors": {
+            "by_index": 1
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 1,
+            "relational": 1,
+            "shape_axis": 1,
+            "translate": 7
+          },
+          "primitives": {
+            "add_border": 1,
+            "align_row": 1,
+            "flip_v": 1,
+            "translate_down": 6,
+            "translate_left": 1
+          },
+          "source_selectors": {
+            "by_index": 10
+          },
+          "target_selectors": {
+            "by_index": 1
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 1,
+            "relational": 1,
+            "shape_axis": 1,
+            "translate": 7
+          },
+          "primitives": {
+            "align_row": 1,
+            "fill_interior": 1,
+            "flip_v": 1,
+            "translate_down": 7
+          },
+          "source_selectors": {
+            "by_color": 9,
+            "by_index": 1
+          },
+          "target_selectors": {
+            "by_index": 1
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 1,
+            "relational": 1,
+            "shape_axis": 2,
+            "translate": 6
+          },
+          "primitives": {
+            "add_border": 1,
+            "align_row": 1,
+            "flip_v": 1,
+            "hollow": 1,
+            "translate_down": 6
+          },
+          "source_selectors": {
+            "by_color": 3,
+            "by_index": 7
+          },
+          "target_selectors": {
+            "by_index": 1
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 1,
+            "relational": 1,
+            "shape_axis": 2,
+            "translate": 6
+          },
+          "primitives": {
+            "add_border": 1,
+            "align_row": 1,
+            "flip_v": 1,
+            "hollow": 1,
+            "translate_down": 6
+          },
+          "source_selectors": {
+            "by_color": 9,
+            "by_index": 1
+          },
+          "target_selectors": {
+            "by_index": 1
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 1,
+            "relational": 1,
+            "translate": 8
+          },
+          "primitives": {
+            "align_row": 1,
+            "flip_v": 1,
+            "translate_down": 7,
+            "translate_left": 1
+          },
+          "source_selectors": {
+            "by_color": 9,
+            "by_index": 1
+          },
+          "target_selectors": {
+            "by_index": 1
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 1,
+            "relational": 1,
+            "translate": 8
+          },
+          "primitives": {
+            "align_row": 1,
+            "flip_v": 1,
+            "translate_down": 7,
+            "translate_left": 1
+          },
+          "source_selectors": {
+            "by_index": 10
+          },
+          "target_selectors": {
+            "by_index": 1
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 1,
+            "relational": 1,
+            "translate": 8
+          },
+          "primitives": {
+            "align_row": 1,
+            "flip_v": 1,
+            "translate_down": 8
+          },
+          "source_selectors": {
+            "by_color": 9,
+            "by_index": 1
+          },
+          "target_selectors": {
+            "by_index": 1
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 2,
+            "relational": 1,
+            "translate": 7
+          },
+          "primitives": {
+            "align_row": 1,
+            "flip_v": 1,
+            "rot90": 1,
+            "translate_down": 5,
+            "translate_left": 1,
+            "translate_up": 1
+          },
+          "source_selectors": {
+            "by_index": 10
+          },
+          "target_selectors": {
+            "by_index": 1
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 2,
+            "relational": 2,
+            "shape_axis": 1,
+            "translate": 5
+          },
+          "primitives": {
+            "align_row": 1,
+            "hollow": 1,
+            "rot90": 2,
+            "swap_colors": 1,
+            "translate_down": 2,
+            "translate_right": 1,
+            "translate_up": 2
+          },
+          "source_selectors": {
+            "by_color": 4,
+            "by_index": 6
+          },
+          "target_selectors": {
+            "by_index": 2
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_precondition": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 2,
+            "relational": 2,
+            "shape_axis": 2,
+            "translate": 4
+          },
+          "primitives": {
+            "add_border": 1,
+            "align_row": 1,
+            "flip_v": 1,
+            "hollow": 1,
+            "rot90": 1,
+            "swap_colors": 1,
+            "translate_left": 2,
+            "translate_right": 1,
+            "translate_up": 1
+          },
+          "source_selectors": {
+            "ALL": 1,
+            "by_color": 1,
+            "by_index": 8
+          },
+          "target_selectors": {
+            "by_index": 2
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 2,
+            "relational": 2,
+            "shape_axis": 3,
+            "translate": 3
+          },
+          "primitives": {
+            "add_border": 1,
+            "align_row": 1,
+            "flip_h": 1,
+            "hollow": 2,
+            "rot90": 1,
+            "swap_colors": 1,
+            "translate_right": 2,
+            "translate_up": 1
+          },
+          "source_selectors": {
+            "ALL": 1,
+            "by_color": 3,
+            "by_index": 6
+          },
+          "target_selectors": {
+            "by_index": 2
+          }
+        },
+        "task_successes": 0
+      },
+      {
+        "pair_failure_reasons": {
+          "engine_collision_or_oob": 1
+        },
+        "pair_failures": 1,
+        "program_attempts": 1,
+        "signature": {
+          "depth": 10,
+          "primitive_families": {
+            "d4": 2,
+            "relational": 3,
+            "shape_axis": 1,
+            "translate": 4
+          },
+          "primitives": {
+            "align_col": 1,
+            "align_row": 1,
+            "fill_interior": 1,
+            "rot90": 2,
+            "swap_colors": 1,
+            "translate_right": 1,
+            "translate_up": 3
+          },
+          "source_selectors": {
+            "by_color": 3,
+            "by_index": 7
+          },
+          "target_selectors": {
+            "by_index": 3
+          }
+        },
+        "task_successes": 0
+      }
+    ],
+    "none_attempts": 0,
+    "pair_attempts": 35,
+    "pair_elapsed_sec": 16.957367949653417,
+    "pair_execution_retries": 16,
+    "pair_failure_reasons": {
+      "engine_collision_or_oob": 31,
+      "engine_noop": 1,
+      "engine_precondition": 1,
+      "scene_none": 1
+    },
+    "pair_failures": 34,
+    "produced_tasks": 1,
+    "program_attempts": 35,
+    "program_dead_ends": 0,
+    "requested_tasks": 1,
+    "sampler_calls": 74,
+    "sampler_dead_ends": 39,
+    "sampler_elapsed_sec": 1.1138035403564572,
+    "sampler_steps": 606,
+    "tasks_per_sec": 0.013814588836414964,
+    "workers": 1
+  },
+  "suite": "multi_hard",
+  "world_size": 15
+}
