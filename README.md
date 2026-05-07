@@ -882,3 +882,8 @@ Key future work:
   with multi-selectors that happen to resolve to one object.
 - Continue tightening filter-aware abstract dominant programs over latent
   object slots.
+
+## License
+
+The BabyTheorist code is released under the MIT License; see `LICENSE`.
+The released BabyTheorist dataset archives are released under CC0-1.0.
