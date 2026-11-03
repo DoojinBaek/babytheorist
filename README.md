@@ -1,6 +1,13 @@
-# BabyTheorist: A Benchmark for Learning to Theorize the World
+# BabyTheorist: A Benchmark for Learning to Theorize the World from Observation Alone
 
-Current development release: `v0.5.5`.
+Doojin Baek\*, Junyeob Baek\*, Mingyu Jo, Hosung Lee, Taegu Kang, Gyubin Lee,
+Sungjin Ahn (KAIST). \*Equal contribution.
+
+NeurIPS 2026 Evaluations & Datasets Track ·
+[Paper](https://openreview.net/forum?id=hApxBFwJyI) ·
+[Dataset (Harvard Dataverse)](https://doi.org/10.7910/DVN/H9UGTL)
+
+The paper uses release `v0.5.5` of the code, benchmark spec, and datasets.
 
 BabyTheorist is a visual benchmark for **Learning to Theorize the World from Observation**. A
 model observes many before/after pairs `(x, y)`: something changes between the
@@ -775,32 +782,21 @@ Recommended benchmark seeds:
 
 ## Versioning
 
-BabyTheorist is currently in active development. The current development release is
-`v0.5.5`. Until the paper submission release, benchmark semantics, generation
-rules, filter coverage, and dataset presets may still change.
+`v0.5.5` is the release used for all results in the NeurIPS 2026 paper. Its
+code, benchmark spec, and dataset releases share the same version string.
 
-BabyTheorist uses semantic versioning with the following project-specific convention:
+BabyTheorist uses semantic versioning:
 
-- `0.y.z`: pre-submission development releases. APIs and benchmark details may
-  change, but changes should still be documented.
-- `0.y.0`: meaningful development milestones, such as generator policy changes,
-  filter rule updates, eval-support policy changes, or public API additions.
-- `0.y.z` where `z > 0`: patch-level fixes within a development milestone,
-  such as bug fixes, documentation updates, or implementation cleanup that does
-  not intentionally change the benchmark semantics.
-- `1.0.0`: the paper-submission benchmark release. This should pin the official
-  benchmark specification, generator behavior, evaluation contract, and dataset
-  release used for reported experiments.
-- `1.0.y`: post-submission fixes that do not change benchmark semantics or
+- `0.5.y` where `y > 5`: fixes that do not change benchmark semantics or
   invalidate reported results.
-- `1.x.0`: backward-compatible additions after `1.0.0`.
-- `2.0.0`: any intentional breaking change to benchmark semantics, scoring, or
-  official data-generation policy after `1.0.0`.
+- `0.y.0` where `y > 5`: backward-compatible additions or intentional changes to
+  benchmark semantics, scoring, or official data-generation policy. Such
+  releases are not comparable with the paper results.
 
 There are three related version identifiers:
 
 - Code version: the repository/package implementation version, tagged in git
-  as `v0.1.0`, `v0.2.0`, ..., `v1.0.0`.
+  as `v0.5.5`.
 - Benchmark spec version: the semantic contract of primitives, selectors,
   generation rules, eval ambiguity handling, and scoring.
 - Dataset release version: a concrete generated dataset bundle, including mode,
@@ -823,25 +819,11 @@ names, or metadata modes such as `single_easy`; treat those as provenance
 fields. The loader normalizes those legacy modes when the files live under the
 matching public directory.
 
-For the paper release, cite the exact git tag and dataset release, for example:
-
-```text
-BabyTheorist code: v1.0.0
-BabyTheorist benchmark spec: v1.0.0
-BabyTheorist dataset release:
-  BabyTheorist-single_a-v1.0.0
-  BabyTheorist-multi_dev-v1.0.0
-  BabyTheorist-multi_a-v1.0.0
-  BabyTheorist-single_b-v1.0.0
-  BabyTheorist-multi_b-v1.0.0
-```
-
-Recommended tag commands:
-
-```bash
-git tag -a v0.5.5 -m "BabyTheorist primitive-curriculum development release"
-git tag -a v1.0.0 -m "BabyTheorist paper submission benchmark release"
-```
+To reproduce the paper, use git tag `v0.5.5` and the dataset releases
+`BabyTheorist-single_a-v0.5.5`, `BabyTheorist-multi_dev-v0.5.5`,
+`BabyTheorist-multi_a-v0.5.5`, `BabyTheorist-single_b-v0.5.5`, and
+`BabyTheorist-multi_b-v0.5.5` from the
+[Dataverse record](https://doi.org/10.7910/DVN/H9UGTL).
 
 ## Current Scope
 
@@ -871,7 +853,6 @@ Known development directions are tracked in:
 
 - `docs/abstract_dominant_programs.md`
 - `docs/filter_rulebook.md`
-- `docs/filter_rulebook_ko_v2.md`
 
 Key future work:
 
@@ -887,3 +868,14 @@ Key future work:
 
 The BabyTheorist code is released under the MIT License; see `LICENSE`.
 The released BabyTheorist dataset archives are released under CC0-1.0.
+
+## Citation
+
+```bibtex
+@inproceedings{baek2026babytheorist,
+  title     = {BabyTheorist: A Benchmark for Learning to Theorize the World from Observation Alone},
+  author    = {Baek, Doojin and Baek, Junyeob and Jo, Mingyu and Lee, Hosung and Kang, Taegu and Lee, Gyubin and Ahn, Sungjin},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS) Evaluations and Datasets Track},
+  year      = {2026}
+}
+```
